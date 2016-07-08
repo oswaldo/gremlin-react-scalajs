@@ -9,7 +9,7 @@ import scalacss.ScalaCssReact._
 object Home extends StyleSheet.Inline {
   import dsl._
   val content = style(textAlign.center,
-    fontSize(30.px),
-    minHeight(450.px),
-    paddingTop(40.px))
+                      fontSize(30.px),
+                      minHeight(450.px),
+                      paddingTop(40.px))
 }

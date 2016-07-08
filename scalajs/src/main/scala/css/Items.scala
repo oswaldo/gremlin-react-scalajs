@@ -9,12 +9,10 @@ import scalacss.ScalaCssReact._
 
 object Items extends StyleSheet.Inline {
   import dsl._
-  val container = style(
-    display.flex,
-    minHeight(600.px))
+  val container = style(display.flex, minHeight(600.px))
 
-  val nav = style(width(190.px),
-    borderRight :=! "1px solid rgb(223, 220, 220)")
+  val nav =
+    style(width(190.px), borderRight :=! "1px solid rgb(223, 220, 220)")
 
   val content = style(padding(30.px))
 }
