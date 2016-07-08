@@ -26,8 +26,8 @@ lazy val scalajsclient = (project in file("scalajs")).settings(
     "com.lihaoyi" %%% "scalatags" % "0.5.5",
     "com.github.japgolly.scalajs-react" %%% "core" % "0.11.1",
     "com.github.japgolly.scalajs-react" %%% "extra" % "0.11.1",
-    "com.github.japgolly.scalacss" %%% "core" % "0.4.1",,
-    "com.github.japgolly.scalacss" %%% "ext-scalatags" % "0.4.1"
+    "com.github.japgolly.scalacss" %%% "core" % "0.4.1",
+    "com.github.japgolly.scalacss" %%% "ext-scalatags" % "0.4.1",
     "com.github.japgolly.scalacss" %%% "ext-react" % "0.4.1"
   ),
   jsDependencies ++= Seq(
