@@ -8,14 +8,19 @@ scalacOptions in Test ++= Seq("-Yrangepos")
 lazy val playserver = (project in file("play")).settings(
   scalaVersion := scalaV,
   scalaJSProjects := clients,
+  pipelineStages in Assets := Seq(scalaJSPipeline),
+  compile in Compile <<= (compile in Compile) dependsOn scalaJSPipeline,
+  pipelineStages := Seq(digest, gzip),
   libraryDependencies ++= Seq(
+    "com.vmunier" %% "scalajs-scripts" % "1.0.0",
     "com.lihaoyi" %% "scalatags" % "0.5.5",
     "org.webjars" % "jquery" % "3.0.0",
     "com.github.japgolly.scalacss" %% "core" % "0.4.1",
     "com.github.japgolly.scalacss" %% "ext-scalatags" % "0.4.1",
     "org.specs2" %% "specs2-junit" % "3.8.5" % "test",
     "com.typesafe.play" %% "play-specs2" % "2.5.9"
-  )
+  ),
+  EclipseKeys.preTasks := Seq(compile in Compile)
 ).enablePlugins(PlayScala).
   aggregate(clients.map(projectToRef): _*).
   dependsOn(sharedJvm)
@@ -26,7 +31,7 @@ lazy val scalajsclient = (project in file("scalajs")).settings(
   persistLauncher in Test := false,
   unmanagedSourceDirectories in Compile := Seq((scalaSource in Compile).value),
   libraryDependencies ++= Seq(
-    "org.scala-js" %%% "scalajs-dom" % "0.8.2",
+    "org.scala-js" %%% "scalajs-dom" % "0.9.1",
     "com.lihaoyi" %%% "scalatags" % "0.5.5",
     "com.github.japgolly.scalajs-react" %%% "core" % "0.11.1",
     "com.github.japgolly.scalajs-react" %%% "extra" % "0.11.1",
