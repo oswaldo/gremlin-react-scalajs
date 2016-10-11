@@ -21,12 +21,12 @@ object LeftNav {
 
   val component = ReactComponentB[Props]("LeftNav").render_P { P =>
     <.ul(css.LeftNav.container)(
-        P.menus.map(
-            item =>
-              <.li(^.key := item.title,
-                   css.LeftNav.menuItem(item == P.selectedPage),
-                   item.title,
-                   P.ctrl setOnClick item))
+      P.menus.map(
+        item =>
+          <.li(^.key := item.title,
+               css.LeftNav.menuItem(item == P.selectedPage),
+               item.title,
+               P.ctrl setOnClick item))
     )
   }.configure(Reusability.shouldComponentUpdate).build
 

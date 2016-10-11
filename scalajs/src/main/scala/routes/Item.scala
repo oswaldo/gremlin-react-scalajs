@@ -25,8 +25,8 @@ object Item {
 
     menu
       .map(i =>
-            staticRoute(i.routerPath, i) ~> renderR(r =>
-                  ItemsPage(props = ItemsPage.Props(i, r))))
+        staticRoute(i.routerPath, i) ~> renderR(r =>
+          ItemsPage(props = ItemsPage.Props(i, r))))
       .reduce(_ | _)
 
   }

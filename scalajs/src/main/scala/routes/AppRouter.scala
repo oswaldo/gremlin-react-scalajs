@@ -1,6 +1,11 @@
 package routes
 
-import japgolly.scalajs.react.extra.router.{Resolution, RouterConfigDsl, RouterCtl, _}
+import japgolly.scalajs.react.extra.router.{
+  Resolution,
+  RouterConfigDsl,
+  RouterCtl,
+  _
+}
 import japgolly.scalajs.react.vdom.prefix_<^._
 
 import components.{TopNav, Footer}
@@ -21,22 +26,22 @@ object AppRouter {
         case Items(p) => p
       }
     (trimSlashes
-          | staticRoute(root, Home) ~> render(HomePage())
-          | itemRoutes)
+      | staticRoute(root, Home) ~> render(HomePage())
+      | itemRoutes)
       .notFound(redirectToPage(Home)(Redirect.Replace))
       .renderWith(layout)
   }
 
   val mainMenu = Vector(
-      Menu("Home", Home),
-      Menu("Items", Items(Item.Info))
+    Menu("Home", Home),
+    Menu("Items", Items(Item.Info))
   )
 
   def layout(c: RouterCtl[AppPage], r: Resolution[AppPage]) = {
     <.div(
-        TopNav(TopNav.Props(mainMenu, r.page, c)),
-        r.render(),
-        Footer()
+      TopNav(TopNav.Props(mainMenu, r.page, c)),
+      r.render(),
+      Footer()
     )
   }
 

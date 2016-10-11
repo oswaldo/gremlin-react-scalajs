@@ -20,13 +20,13 @@ object TopNav extends StyleSheet.Inline {
                       listStyle := "none")
 
   val menuItem = styleF.bool(
-      selected =>
-        styleS(padding(20.px),
-               fontSize(1.5.em),
-               cursor.pointer,
-               color(c"rgb(244, 233, 233)"),
-               mixinIfElse(selected)(
-                   backgroundColor(c"#E8433F"),
-                   fontWeight._500)(&.hover(backgroundColor(c"#B6413E")))))
+    selected =>
+      styleS(
+        padding(20.px),
+        fontSize(1.5.em),
+        cursor.pointer,
+        color(c"rgb(244, 233, 233)"),
+        mixinIfElse(selected)(backgroundColor(c"#E8433F"), fontWeight._500)(
+          &.hover(backgroundColor(c"#B6413E")))))
 
 }

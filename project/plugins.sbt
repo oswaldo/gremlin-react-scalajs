@@ -1,9 +1,9 @@
 resolvers += "Typesafe repository" at "https://repo.typesafe.com/typesafe/releases/"
 
 // The Play plugin
-addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.4")
+addSbtPlugin("com.typesafe.play" % "sbt-plugin" % "2.5.9")
 
-addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "3.0.0")
+addSbtPlugin("com.typesafe.sbteclipse" % "sbteclipse-plugin" % "5.0.1")
 
 // web plugins
 
@@ -19,8 +19,8 @@ addSbtPlugin("com.typesafe.sbt" % "sbt-digest" % "1.1.1")
 
 addSbtPlugin("com.typesafe.sbt" % "sbt-mocha" % "1.1.0")
 
-addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.10")
+addSbtPlugin("org.scala-js" % "sbt-scalajs" % "0.6.12")
 
-addSbtPlugin("com.vmunier" % "sbt-play-scalajs" % "0.3.1")
+addSbtPlugin("com.vmunier" % "sbt-web-scalajs" % "1.0.2")
 
-addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.2.10")
+addSbtPlugin("com.geirsson" % "sbt-scalafmt" % "0.4.5")
