@@ -18,7 +18,9 @@ lazy val playserver = (project in file("play")).settings(
     "com.github.japgolly.scalacss" %% "core" % "0.4.1",
     "com.github.japgolly.scalacss" %% "ext-scalatags" % "0.4.1",
     "org.specs2" %% "specs2-junit" % "3.8.5" % "test",
-    "com.typesafe.play" %% "play-specs2" % "2.5.9"
+    "com.typesafe.play" %% "play-specs2" % "2.5.9",
+    "com.michaelpollmeier" %% "gremlin-scala" % "3.2.1.0",
+    "com.michaelpollmeier" % "orientdb-gremlin" % "3.2.1.1" exclude("com.github.jeremyh", "jBCrypt")
   ),
   EclipseKeys.preTasks := Seq(compile in Compile)
 ).enablePlugins(PlayScala).
