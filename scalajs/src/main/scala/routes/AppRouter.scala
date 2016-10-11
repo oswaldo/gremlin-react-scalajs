@@ -45,7 +45,7 @@ object AppRouter {
     )
   }
 
-  val baseUrl = BaseUrl.fromWindowOrigin / "react-scalajs-scalatags/"
+  val baseUrl = BaseUrl.fromWindowOrigin / "gremlin-react-scalajs/"
 
   val router = Router(baseUrl, config)
 }

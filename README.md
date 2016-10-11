@@ -1,4 +1,4 @@
 React ScalaJS ScalaTags template for Lightbend Activator
 ==================================================
 
-Modified [play-scala-scalajs-scalatags](https://github.com/oswaldo/play-scala-scalajs-scalatags) including elements from [scalajs-react-template](https://github.com/chandu0101/scalajs-react-template).
+Modified [react-scalajs-scalatags](https://github.com/oswaldo/react-scalajs-scalatags) including elements from [gremlin-scala-examples](https://github.com/mpollmeier/gremlin-scala-examples).
